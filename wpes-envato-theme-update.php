@@ -213,16 +213,6 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 			}
 			
 			if( ! empty( $data ) ){
-				
-				if( version_compare( PHP_VERSION , $this->require_php_version, '>=' ) ){
-					add_action( 'admin_notices' , function(){
-						$output = ' <div class="error notice">';
-						$output .= '<p>'. sprintf( apply_filters( 'check_for_update_notice' , 'Update Available, There is a new version of %s available. View version %s details.' ) , $this->remote_theme_name , '<a href="'. esc_url( admin_url( 'themes.php?theme=' . $this->slug ) ) .'">'. $this->remote_theme_version .'</a>' ) .'</p>';
-						$output .= '</div>';
-						print $output;
-					});
-				}
-				
 				// For debugging purpose.
 				//print_r( $data );
 				$transient->response[ $this->slug ] = $data;
