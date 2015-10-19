@@ -1,5 +1,5 @@
 # WPES-Envato-Theme-Update
- Make your Buyers happy with Automatic update your theme through Envato APIs, made for Theme Authors on Envato Marketplace.
+ Make your Buyers happy with Automatic update your theme through Envato APIs class, made for Theme Authors on Envato Marketplace.
  
 ## Installing:
  
@@ -13,7 +13,9 @@ require get_template_directory() . '/inc/wpes-envato-theme-update.php';
 new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase Code', 'Buyer Personal Access Token' );
 ```
 
-As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` through the API.
+As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the API.
+
+Have a question? feel free to let me know.
 
 [Send me a beer!](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N4FRYTB3Z5RSL)
 
