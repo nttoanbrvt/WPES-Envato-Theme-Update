@@ -181,7 +181,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 				$download_url = ! empty( $remoteData->wordpress_theme ) ? rawurldecode( $remoteData->wordpress_theme ) : '';
 				if( $download_url ){
 					set_transient( $this->slug , $download_url, 3600 );
-					return isset( $remoteData->wordpress_theme ) ? $download_url : '';
+					return $download_url;
 				}
 			}
 		}
