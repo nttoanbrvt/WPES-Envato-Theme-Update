@@ -13,7 +13,7 @@ require get_template_directory() . '/inc/wpes-envato-theme-update.php';
 new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase Code', 'Buyer Personal Access Token' );
 ```
 
-As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the API.
+As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the Theme Options.
 
 Have a question? feel free to let me know.
 
