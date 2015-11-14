@@ -10,7 +10,14 @@ So the code will be looks like this.
 
 ```
 require get_template_directory() . '/inc/wpes-envato-theme-update.php';
-new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase Code', 'Buyer Personal Access Token' );
+if( ! function_exists( 'update_my_theme' ) ){
+	function update_my_theme() {
+		if( class_exists( 'WPES_Envato_Theme_Update' ) ){
+			new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase code' , 'Buyer personal access token' , false );
+		}
+	}
+	add_action( 'init' , 'update_my_theme' );
+}
 ```
 
 As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the API.
