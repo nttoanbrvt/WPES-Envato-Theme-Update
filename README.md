@@ -20,7 +20,7 @@ if( ! function_exists( 'update_my_theme' ) ){
 }
 ```
 
-As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the API.
+As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the Theme Options.
 
 Have a question? feel free to let me know.
 
