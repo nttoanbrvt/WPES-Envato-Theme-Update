@@ -4,8 +4,17 @@
 ## Installing:
  
 * Step 1: Moves ```wpes-envato-theme-update.php``` to your theme inc directory.
-* Step 2: Put this at the end of your ```functions.php``` file ```new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase Code', 'Buyer Personal Access Token' );```
-
+* Step 2: Put this at the end of your ```functions.php``` file 
+```
+if( ! function_exists( 'update_my_theme' ) ){
+	function update_my_theme() {
+		if( class_exists( 'WPES_Envato_Theme_Update' ) ){
+			new WPES_Envato_Theme_Update( basename( get_template_directory() ) , 'Purchase code' , 'Buyer personal access token' , false );
+		}
+	}
+	add_action( 'init' , 'update_my_theme' );
+}
+```
 So the code will be looks like this.
 
 ```
