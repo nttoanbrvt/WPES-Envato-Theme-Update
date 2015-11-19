@@ -31,6 +31,13 @@ if( ! function_exists( 'update_my_theme' ) ){
 
 As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the Theme Options.
 
+## Demo
+
+!http://puu.sh/lqMd1/23d50a1af9.png!
+
+!http://puu.sh/lqMaN/e0caa535bd.png!
+
+
 Have a question? feel free to let me know.
 
 [Send me a beer!](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N4FRYTB3Z5RSL)
