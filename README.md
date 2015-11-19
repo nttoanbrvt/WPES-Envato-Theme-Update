@@ -33,10 +33,9 @@ As theme author, I believe that you know how to pass the ```purchase code``` and
 
 ## Demo
 
-!http://puu.sh/lqMd1/23d50a1af9.png!
+http://puu.sh/lqMd1/23d50a1af9.png
 
-!http://puu.sh/lqMaN/e0caa535bd.png!
-
+http://puu.sh/lqMaN/e0caa535bd.png
 
 Have a question? feel free to let me know.
 
