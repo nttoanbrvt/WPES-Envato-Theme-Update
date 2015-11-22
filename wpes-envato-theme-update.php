@@ -77,7 +77,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 		 * Holds the require PHP version.
 		 * @var unknown_type
 		 */
-		public $require_php_version = '5.3';
+		public $require_php_version = '5.3.0';
 		
 		/**
 		 * Enable debug mode.
@@ -152,7 +152,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 			$response = wp_remote_get( $apiurl , $args );
 			
 			if( is_wp_error( $response ) ){
-				if( version_compare( PHP_VERSION , $this->require_php_version, '>=' ) ){
+				if( defined( 'PHP_VERSION' ) && version_compare( PHP_VERSION , $this->require_php_version, '>' ) ){
 					// Print the error.
 					$error_code 	=	$response->get_error_code();
 					$error_message	=	$response->get_error_message();
