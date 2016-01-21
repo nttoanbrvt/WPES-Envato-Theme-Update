@@ -9,6 +9,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 	 * @Version: 1.0
 	 * @URL: http://themeforest.net/user/phpface
 	 * @Description: Automatic update your theme through Envato APIs, made for Theme Authors on Envato Marketplace.
+	 * @Required permissions: "Download your purchased items" and "View your purchases of the app creator's items"
 	 */
 	class WPES_Envato_Theme_Update {
 		

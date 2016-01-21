@@ -31,11 +31,15 @@ if( ! function_exists( 'update_my_theme' ) ){
 
 As theme author, I believe that you know how to pass the ```purchase code``` and ```buyer personal token key``` values through the Theme Options.
 
+## Required permissions: "Download your purchased items" and "View your purchases of the app creator's items".
+
+![Required permissions](http://puu.sh/mDE7G/b37f23af65.png)
+
 ## Demo
 
-http://puu.sh/lqMd1/23d50a1af9.png
+![Demo 1](http://puu.sh/lqMd1/23d50a1af9.png)
 
-http://puu.sh/lqMaN/e0caa535bd.png
+![Demo 2](http://puu.sh/lqMaN/e0caa535bd.png)
 
 Have a question? feel free to let me know.
 
