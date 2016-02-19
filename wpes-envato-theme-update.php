@@ -6,7 +6,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 	/**
 	 * @author Toan Nguyen
 	 * @Class:  WPES_Envato_Theme_Update
-	 * @Version: 1.0
+	 * @Version: 1.1
 	 * @URL: http://themeforest.net/user/phpface
 	 * @Description: Automatic update your theme through Envato APIs, made for Theme Authors on Envato Marketplace.
 	 * @Required permissions: "Download your purchased items" and "View your purchases of the app creator's items"
@@ -17,13 +17,13 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 		 * Holds the verify api url
 		 * @var string
 		 */
-		private $apiurl_verify_purchase_code = 'https://api.envato.com/v2/market/buyer/purchase?code={purchase_code}';
+		private $apiurl_verify_purchase_code = 'https://api.envato.com/v3/market/buyer/purchase?code={purchase_code}';
 		
 		/**
 		 * Holds the download api url.
 		 * @var string
 		 */
-		private $apiurl_download_purchase = 'https://api.envato.com/v2/market/buyer/download?purchase_code={purchase_code}&shorten_url=true';
+		private $apiurl_download_purchase = 'https://api.envato.com/v3/market/buyer/download?purchase_code={purchase_code}&shorten_url=true';
 		
 		/**
 		 * Holds the Personal Token.
@@ -192,7 +192,20 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 		 * @param object $transient
 		 */
 		function check_for_update( $transient ){
+			
+			$current_theme_name	=	'';
+			$current_theme_version	=	'';
+			
 			$theme = wp_get_theme();
+			
+			if( $theme->parent() ){
+				$current_theme_name	=	$theme->parent()->get('Name');
+				$current_theme_version	=	$theme->parent()->get('Version');
+			}
+			else{
+				$current_theme_name	=	$theme->get('Name');
+				$current_theme_version	=	$theme->get('Version');
+			}
 
 			if ( empty ($transient->checked ) ){
 				return $transient;
@@ -203,7 +216,7 @@ if( ! class_exists( 'WPES_Envato_Theme_Update' ) ){
 			$this->remote_theme_name = isset( $remoteData->item->wordpress_theme_metadata->theme_name ) ? rawurldecode( $remoteData->item->wordpress_theme_metadata->theme_name ) : '';
 			$this->remote_theme_version = isset( $remoteData->item->wordpress_theme_metadata->version ) ? rawurldecode( $remoteData->item->wordpress_theme_metadata->version ) : '';
 			
-			if( $this->remote_theme_name == $theme && version_compare( $this->remote_theme_version, $theme->version, '>' ) ){
+			if( $this->remote_theme_name == $current_theme_name && version_compare( $this->remote_theme_version, $current_theme_version, '>' ) ){
 				
 				// Update the changelogs
 				$this->update_changelogs( $theme , $remoteData->item->description );

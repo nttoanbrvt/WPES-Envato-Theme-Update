@@ -48,3 +48,10 @@ Have a question? feel free to let me know.
 [Send me a beer!](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=N4FRYTB3Z5RSL)
 
 Cheers.
+
+## Changelogs
+
+19 Feb 2016
+V1.1
+Fixed: Child theme.
+Updated: API V3.
